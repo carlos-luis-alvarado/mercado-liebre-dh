@@ -287,7 +287,7 @@ main section article {
 
 .btn:hover {
   cursor: pointer;
-  background-color: var(--verde);
+  background-color: #0022AA;
 }
 
 .borrar:hover {
@@ -329,9 +329,13 @@ fieldset:hover {
 }
 
 @media (min-width: 481px) {
-  .producto__nombre {
+
+
+  /* .producto:hover p {
+    position: absolute;
+
     display: block;
-  }
+  } */
 
 
 
@@ -339,6 +343,7 @@ fieldset:hover {
 }
 
 @media (min-width: 992px) {
+
 
   .icon-burger,
   .burger-menu {
@@ -375,11 +380,6 @@ fieldset:hover {
   }
 
 
-
-  main section article {
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-  }
-
   .section-visita,
   .section-oferta {
     display: flex;
@@ -389,12 +389,54 @@ fieldset:hover {
 
   .producto {
     width: 48%;
+    transition: 1s all;
   }
 
+  .producto__nombre {
+    display: block;
+    opacity: 0;
+    transition: 1s all;
+  }
+
+  .producto:hover {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  }
+
+  .producto:hover .producto__nombre {
+    opacity: 1;
+
+  }
+
+  .producto i {
+    transition: all 1s;
+  }
+
+  .producto:hover i {
+    transform: rotate(-90deg);
+
+  }
 }
 
 @media (min-width: 1200px) {
   .producto {
     width: 23%;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .footer section {
+    width: 30%;
+  }
+
+  .footer section i:hover {
+    color: var(--verde);
+  }
+
+  .copyright {
+    text-align: start;
   }
 }
